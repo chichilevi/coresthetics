@@ -1,0 +1,24 @@
+---
+layout: layouts/base.njk
+---
+<body class="single-page footer-sticky expand-featured-media">
+{% include "components/header-top-feature.njk" %}
+	<main id="content">
+    {{ content | safe }}
+	</main>
+{% include "components/sales-box.njk" %}
+{% include "components/footer.njk" %}
+    <!-- JS    ============================================ -->
+	<script src="/assets/js/jquery-3.2.1.min.js"></script>
+	<script src="/assets/js/modernizr-custom.js"></script>
+	<script src="/assets/js/functions.js"></script>
+
+	<!-- MediaElement.js files -->
+	<link rel="stylesheet" id="mediaelement-css" href="/assets/mediaelement/mediaelementplayer-legacy.css">
+	<link rel="stylesheet" id="wp-mediaelement-css" href="/assets/mediaelement/wp-mediaelement.css">
+	<link rel="stylesheet" id="anii-additional-mediaelement-css" href="/assets/css/mediaelement-anii.css">
+	<script src="/assets/mediaelement/mediaelement-and-player.js"></script>
+	<script src="/assets/mediaelement/mediaelement-migrate.js"></script>
+	<script src="/assets/mediaelement/wp-mediaelement.js"></script>
+	<script src="/assets/js/mediaelement-anii.js"></script>
+</body>

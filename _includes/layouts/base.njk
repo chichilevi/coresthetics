@@ -1,0 +1,54 @@
+<!doctype html>
+<html class="no-js" lang="{{ metadata.language }}">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{{ title or metadata.title }}</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="{{ description or metadata.description }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/plugins.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="/assets/js/vendor/modernizr-2.8.3.min.js"></script>
+    
+    {#- Uncomment this if you’d like folks to know that you used Eleventy to build your site!  #}
+    {#- <meta name="generator" content="{{ eleventy.generator }}"> #}
+    {#-
+    CSS bundles are provided via the `eleventy-plugin-bundle` plugin:
+    1. You can add to them using `{% css %}`
+    2. You can get from them using `{% getBundle "css" %}` or `{% getBundleFileUrl "css" %}`
+    3. You can do the same for JS: {% js %}{% endjs %} and <script>{% getBundle "js" %}</script>
+    4. Learn more: https://github.com/11ty/eleventy-plugin-bundle
+    #}
+    {#- Add an arbitrary string to the bundle #}
+    {%- css %}* { box-sizing: border-box; }{% endcss %}
+
+    <!--Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    {#- Or add from node_modules #}
+
+    {#- Render the CSS bundle using Inlined CSS (for the fastest site performance in production) #}
+    <style>{% getBundle "css" %}</style>
+
+</head>
+<body>
+<!-- Main Wrapper Start -->
+<div class="main-wrapper">
+    {{ content | safe }}
+</div>
+<!-- Main Wrapper End -->
+<script src="/assets/js/vendor/jquery-1.12.4.min.js"></script><script src="/assets/js/popper.min.js"></script><script src="/assets/js/bootstrap.min.js"></script><script src="/assets/js/plugins.js"></script><script src="/assets/js/ajax-mail.js"></script><script src="/assets/js/main.js"></script>
+</body>
+</html>
